@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-space: #999b9ca6;
+  --star-blue: #2763a0;
+  --border-white: #f7f8fa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--deep-space);
+  line-height: 1.5;
+}
+
+header {
+  width: 90%;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+
+}
+
+h1,
+h2 {
+  margin: 0.5rem;
+  color: var(--star-blue);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+p {
+  font: var(--border-white);
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-container>div {
+  background-color: var(--border-white);
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 12px;
+}
+
+.card-container>div:nth-child():hover {
+  transform: rotateY(180deg);
+}
+
+.flex-pic {
+  border: 5px solid var(--border-white);
+  background-color: var(--deep-space);
+  color: var(--star-blue);
+  min-height: 300px;
+  max-height: 400px;
+  min-width: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
+}
+
+.flex-avatar {
+  border: 5px solid var(--border-white);
+  min-height: 120px;
+  max-height: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  background-size: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.avatar-pic {
+  background-image: url("images/avatar-pic.png");
+  background-position: left;
+}
+
+.checkers {
+  background-image: url("images/checkers.png");
+}
+
+.pasta {
+  background-image: url("images/pasta.png");
+}
+
+.kittens {
+  background-image: url("images/kitten.png");
+}
+
+@media screen and (max-width: 980px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-pic {
+    flex-basis: 100%;
+  }
+}
