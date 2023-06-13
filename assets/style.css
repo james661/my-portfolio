@@ -14,6 +14,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--deep-space);
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header {
@@ -28,15 +31,24 @@ header {
 h1,
 h2 {
   margin: 0.5rem;
-  color: var(--star-blue);
+  /* color: var(--star-blue); */
 }
 
 h1 {
   font-size: 2.5rem;
+  
 }
 
 h2 {
   font-size: 1.5rem;
+  color: var(--star-blue);
+  background-color: #f7f8fa;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--star-blue);
+  background-color: #f7f8fa;
 }
 
 navigation {
@@ -47,7 +59,8 @@ navigation {
 }
 
 p {
-  font: var(--border-white);
+  color: var(--star-blue);
+  background-color: #f7f8fa;
   font-size: 1rem;
   flex-wrap: wrap;
 }
@@ -67,17 +80,20 @@ p {
   border-radius: 12px;
 }
 
-.card-container>div:nth-child():hover {
+.card-container>a:hover {
   transform: rotateY(180deg);
+  transition-duration: 2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .flex-pic {
   border: 5px solid var(--border-white);
   background-color: var(--deep-space);
   color: var(--star-blue);
-  min-height: 300px;
-  max-height: 400px;
-  min-width: 300px;
+  
+  height: 300px;
+  width: 300px;
   display: flex;
   align-items: flex-end;
   padding: 0 0 20px 0;
@@ -89,13 +105,16 @@ p {
 
 .flex-avatar {
   border: 5px solid var(--border-white);
-  min-height: 120px;
-  max-height: 120px;
-  min-width: 120px;
-  max-width: 120px;
+  border-radius: 45%;
+  height: 200px;
+  width: 200px;
   background-size: 100%;
   display: flex;
   justify-content: left;
+  -webkit-border-radius: 45%;
+  -moz-border-radius: 45%;
+  -ms-border-radius: 45%;
+  -o-border-radius: 45%;
 }
 
 .avatar-pic {
@@ -107,13 +126,14 @@ p {
   background-image: url("images/checkers.png");
 }
 
-.pasta {
-  background-image: url("images/pasta.png");
+.logo {
+  background-image: url("images/Logo.png");
 }
 
 .kittens {
   background-image: url("images/kitten.png");
 }
+
 
 @media screen and (max-width: 980px) {
   header {
@@ -129,7 +149,7 @@ p {
     font-size: 10vw;
   }
 
-  header nav {
+  header navigation {
     justify-content: center;
   }
 }
@@ -138,4 +158,11 @@ p {
   .flex-pic {
     flex-basis: 100%;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
