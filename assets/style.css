@@ -43,6 +43,7 @@ h2 {
   font-size: 1.5rem;
   color: var(--star-blue);
   background-color: #f7f8fa;
+  
 }
 
 h3 {
@@ -122,8 +123,9 @@ p {
   background-position: left;
 }
 
-.checkers {
-  background-image: url("images/checkers.png");
+.event-connect {
+  background-image: url("images/Event-Connect2.png");
+  
 }
 
 .logo {
